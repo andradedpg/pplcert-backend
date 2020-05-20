@@ -27,7 +27,7 @@ class MailController extends Controller
      */
     private function sendMailFromHotSite($data){
     
-        Mail::to($data['email'])->send(new ContactMail($data));
+        Mail::to(['dandrade.dev@gmail.com','rosanneklerx@gmail.com'])->send(new ContactMail($data));
         
         if(count(Mail::failures()) > 0){
             return response()->json(['success'=>true, 'msg'=>'Failed to send'], 500);
