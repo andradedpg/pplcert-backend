@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => 'cors'], function () {
     Route::get('/check', ['uses' => 'UsuarioController@checkToken']);
     Route::post('/mail/send/{layout}', ['uses' => 'MailController@send']);
+    
+    Route::get('/airtable/products/search/{txt}', ['uses' => 'AirTableController@getData']);
 
     Route::group(['middleware' => 'auth:api'], function () {
         // Route::get('/menus/getByModuloLogin/{id}', ['uses' => 'MenuController@getMenusModuloByLogin']);

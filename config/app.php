@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'America/Recife',
+    'timezone' => 'Europe/Amsterdam',
 
     /*
     |--------------------------------------------------------------------------
