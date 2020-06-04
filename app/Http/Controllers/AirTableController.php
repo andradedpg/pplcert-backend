@@ -21,7 +21,7 @@ class AirTableController extends Controller
             $producer = isset($product['fields']['Producer']) ? $product['fields']['Producer'] : null; 
             $photo    = isset($product['fields']['Photo']) ? $product['fields']['Photo'] : null; 
 
-            if(strstr($type, $txt) || strstr($name, $txt)){
+            if(strstr(strtoupper($type), strtoupper($txt)) || strstr(strtoupper($name), strtoupper($txt))){
                 $products[$cc]['id']        = $product['id'];
                 $products[$cc]['name']      = $name;
                 $products[$cc]['type']      = $type;
